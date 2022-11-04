@@ -6,7 +6,7 @@ import { useCallback } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import Tilt from "react-parallax-tilt"
-
+import ImageLinkForm from "./components/ImagaeLinkForm/ImageLinkForm"
 
   const App = () => {
     const particlesInit = useCallback(async (engine) => {
@@ -18,6 +18,13 @@ import Tilt from "react-parallax-tilt"
       await console.log(container);
     }, []);
 
+    const onInputChange = (event) => {
+      console.log(event.target.value);
+    }
+
+    const onButtonSubmit = () => {
+      console.log("clicked");
+    }
     
 
     return (
@@ -104,6 +111,8 @@ import Tilt from "react-parallax-tilt"
       <Navbar/>
       <Logo/>
       <Tilt/>
+      <ImageLinkForm onInputChnange={onInputChange} onButtonSubmit={onButtonSubmit} />
+
     </div>
       
 

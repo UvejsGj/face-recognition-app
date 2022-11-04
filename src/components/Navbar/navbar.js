@@ -1,7 +1,7 @@
 const Navbar = () => {
     return (
-        <nav style={{display: "flex", justifyContent: "end"}}>
-            <p className="f3 ma4 Link dark-gray pointer">Log In</p>
+        <nav style={{display: "flex", justifyContent: "flex-end"}}>
+            <p className="f3 pa3 ma4 link dim black underline pointer">Log In</p>
         </nav>
     )      
 }
