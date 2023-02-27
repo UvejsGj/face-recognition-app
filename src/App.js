@@ -83,7 +83,7 @@ import ImageLinkForm from "./components/ImagaeLinkForm/ImageLinkForm"
               default: "bounce",
             },
             random: false,
-            speed: 6,
+            speed: 3  ,
             straight: false,
           },
           number: {
