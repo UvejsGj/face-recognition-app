@@ -1,7 +1,7 @@
-.forms {
+.form {
     background-color: white;
     width: 600px;
-    height: 500px;
+    height: 400px;
     display: flex;
     flex-direction: column;
     margin-top: 100px;
@@ -11,23 +11,7 @@
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-.firstname{
-    margin: 20px;
-    outline: none;
-    border: none;
-    border-bottom: 1px solid black;
-    color: black;
-    background: transparent;
-}
 
-.lastname {
-    margin: 20px;
-    outline: none;
-    border: none;
-    border-bottom: 1px solid black;
-    color: black;
-    background: transparent;
-}
 
 .email {
     margin: 20px;
@@ -47,14 +31,7 @@
     background: transparent;
 }
 
-.retypepassword {
-    margin: 20px;
-    outline: none;
-    border: none;
-    border-bottom: 1px solid black;
-    color: black;
-    background: transparent;
-}
+
 
 ::placeholder{
     color: black;
@@ -63,7 +40,8 @@
 .button {
     border-radius: 20px;
     width: 100px;
-    height: 150px;
+    height: 50px;
     margin-left: 210px;
+    margin-top: 40px;
     background-image: black;    
 }

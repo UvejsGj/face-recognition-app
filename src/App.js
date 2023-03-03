@@ -3,6 +3,7 @@ import './App.css';
 import { Routes, Route } from "react-router-dom";
 import HomePage from './Pages/HomePage/home';
 import SignUp from './Pages/SignUp/signup';
+import LogIn from './Pages/LogIn/login';
     
 const App = () => {
     return (
@@ -10,17 +11,8 @@ const App = () => {
         <Routes>
         <Route path="/" element={<HomePage/>} />
         <Route path="/signup" element={<SignUp/>} />
+        <Route path="/login" element={<LogIn/>} />
       </Routes>
-    
-      
-    
-
-  
-      <Navbar/>
-      <Logo/>
-      <Tilt/>
-      <ImageLinkForm onInputChnange={onInputChange} onButtonSubmit={onButtonSubmit} />
-
     </div>
     );
   

@@ -1,12 +1,11 @@
 // import logo from './logo.svg';
-import './App.css';
 import Navbar from "../../../src/components/Navbar/navbar"
 import Logo from '../../../src/components/Logo/logo';
 import { useCallback } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import Tilt from "react-parallax-tilt"
-import ImageLinkForm from "./components/ImagaeLinkForm/ImageLinkForm"
+import ImageLinkForm from "../../components/ImagaeLinkForm/ImageLinkForm";
 
   const HomePage = () => {
     const particlesInit = useCallback(async (engine) => {
