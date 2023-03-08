@@ -37,11 +37,15 @@
     color: black;
 }
 
-.button {
+.button1 {
     border-radius: 20px;
     width: 100px;
     height: 50px;
     margin-left: 210px;
     margin-top: 40px;
     background-image: black;    
+}
+
+.button1:hover {
+    background-color: white;
 }

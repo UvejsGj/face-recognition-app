@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom";
+import "./navbar.css"
 
 const Navbar = () => {
     return (
         <nav style={{display: "flex", justifyContent: "flex-end"}}>
-        <Link to="/login"> <p className="f3 pa3 ma4 link dim black underline pointer">Log In</p> </Link>
-        <Link to="/signup"> <p className="f3 pa3 ma4 link dim black underline pointer">Sign Up</p> </Link>
+            
+        <Link className="link1" to="/"> <p className="home">Home</p> </Link>
+        <Link className="link1" to="/login"> <p className="login">Log In</p> </Link>
+        <Link className="link1" to="/signup"> <p className=" signup">Sign Up</p> </Link>
 
         </nav>
     )      
