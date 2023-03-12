@@ -1,4 +1,6 @@
 // import logo from './logo.svg';
+import "./home.css";
+import React, { useState, useRef } from "react";
 import Navbar from "../../../src/components/Navbar/navbar"
 import Logo from '../../../src/components/Logo/logo';
 import { useCallback } from "react";
@@ -6,8 +8,10 @@ import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import Tilt from "react-parallax-tilt"
 import ImageLinkForm from "../../components/ImagaeLinkForm/ImageLinkForm";
+import {Camera} from "react-camera-pro";
 
   const HomePage = () => {
+
     const particlesInit = useCallback(async (engine) => {
       console.log(engine);
       await loadFull(engine);
@@ -24,10 +28,34 @@ import ImageLinkForm from "../../components/ImagaeLinkForm/ImageLinkForm";
     const onButtonSubmit = () => {
       console.log("clicked");
     }
+
+ 
+      const camera = useRef(null);
+      const [numberOfCameras, setNumberOfCameras] = useState(0);
+      const [image, setImage] = useState(null);
+    
+
+
     
 
     return (
+      
     <div className='Home'>
+       <Camera className="camera" aspectRatio={16 / 9} ref={camera} numberOfCamerasCallback={setNumberOfCameras} />
+      <img src={image} alt='Image preview' />
+      <button
+        onClick={() => {
+            const photo = camera.current.takePhoto();
+            setImage(photo);
+        }}
+      />
+      <button
+        hidden={numberOfCameras <= 1}
+        onClick={() => {
+          camera.current.switchCamera();
+        }}
+      />
+
       <Particles
       id="tsparticles"
       init={particlesInit}
