@@ -32,7 +32,6 @@ import {Camera} from "react-camera-pro";
  
       const camera = useRef(null);
       const [numberOfCameras, setNumberOfCameras] = useState(0);
-      const [image, setImage] = useState(null);
     
 
 
@@ -41,14 +40,10 @@ import {Camera} from "react-camera-pro";
     return (
       
     <div className='Home'>
-       <Camera className="camera" aspectRatio={16 / 9} ref={camera} numberOfCamerasCallback={setNumberOfCameras} />
-      <img src={image} alt='Image preview' />
-      <button
-        onClick={() => {
-            const photo = camera.current.takePhoto();
-            setImage(photo);
-        }}
-      />
+      <div className="camera" >
+     <Camera className="camera" aspectRatio={16 / 9} ref={camera} numberOfCamerasCallback={setNumberOfCameras} />
+      
+      </div>
       <button
         hidden={numberOfCameras <= 1}
         onClick={() => {

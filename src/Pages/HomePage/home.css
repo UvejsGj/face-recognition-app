@@ -1,5 +1,8 @@
 .camera {
-    height: 500px;
+    height: 300px;
     width: 600px;
-    position: relative;
+    position: absolute;
+    left: 660px;
+    top: 550px;
+    z-index: 999;
 }
